@@ -41,7 +41,8 @@ h2 {
 .header {
     position: sticky;
     top: 0;
-    background: rgba(2, 6, 23);
+    backdrop-filter: blur(12px);
+    background: rgba(2, 6, 23, 0.6);
     z-index: 100;
 }
 
@@ -68,6 +69,25 @@ h2 {
     color: white;
     position: relative;
     transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
 }
 
 /* HERO */
@@ -121,6 +141,11 @@ h2 {
     font-size:20px;
     cursor:pointer;
     color:var(--primary);
+    transition:0.3s;
+}
+
+.theme-btn:hover{
+    transform:scale(1.2);
 }
 
 .primary {
@@ -224,7 +249,7 @@ body.light{
 }
 
 .light .header{
-    background: rgba(255,255,255);
+    background: rgba(255,255,255, 0.7);
 }
 
 .light .nav-links a{
