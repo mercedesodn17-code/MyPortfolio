@@ -203,6 +203,19 @@ h2 {
     opacity: 0.7;
 }
 
+/* SCROLL ANIMATION */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.7s;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* LIGHT MODE */
 
 body.light{
